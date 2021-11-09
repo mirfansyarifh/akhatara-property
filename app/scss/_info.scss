@@ -1,0 +1,50 @@
+.info {
+    background-color: $greyBlue;
+    text-align: center;
+    padding: 0 0;
+    &__grid {
+        @include breakpoint-up(large){
+            display: flex;
+            margin: auto 6rem;
+        }
+    }
+    &__item {
+            padding: 2rem 0;
+            line-height: 6rem;
+
+        @include breakpoint-up(large){
+            flex:1 ;
+
+        }
+    }
+    &__title {
+        color: $littledarkWhite;
+        font-weight: 700;
+        font-size: $font-xlar;
+        letter-spacing: 0.2px;
+
+        }
+    &__subs {
+        color: $littledarkWhite;
+        position: relative;
+        top: -0.5em;
+        font-weight: 600;
+        font-size: $font-med;
+        padding-left: 0.5rem;
+        }
+
+    &__test {
+        display: flex;
+        justify-content: center;
+        }
+
+    &__descriptions{
+        padding-top: 0.2rem;
+        color: $greydark;
+        font-weight: 300; 
+        line-height: 1.75rem;
+        font-size: $font-sm;
+    }
+
+
+}

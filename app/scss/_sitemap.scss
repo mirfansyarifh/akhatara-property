@@ -1,0 +1,33 @@
+.sitemap {
+    text-align: center;
+    background-color: $white;
+    h1 {
+        color: $greyBlue;
+        font-weight: 700;
+        font-size: 1rem;
+        padding-bottom: 2rem;
+        margin-bottom: 0px;
+        @include breakpoint-up(large){
+            font-size: $font-lar;
+            padding-bottom: 3rem;
+
+        }
+    }
+    &__item{
+        padding: 0 1.5rem;
+        @include breakpoint-up(large){
+            padding: 0 9rem;
+        }
+    }
+    &__images{
+        position: relative;
+        background-image: url('/assets/denah.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height: 14.463125rem;
+        @include breakpoint-up(large){
+            min-height: 50.6875rem;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+.partner {
+    text-align: center;
+    background-color: $white;
+    padding-top: 3rem;
+    padding-bottom: 1.5rem;
+    @include breakpoint-up(large){
+        padding-top: 6rem;
+        padding-bottom: 3rem;
+    }
+    
+    &__grid {
+        margin: 0 3.6875rem;
+
+        @include breakpoint-up(large){
+            display: flex;
+            padding-top: 4rem;
+            margin: 0 7rem;
+        }
+    }
+
+    h1{
+        color: $greyBlue;
+        font-weight: 700;
+        font-size: 1rem;
+        margin: auto 3rem ;
+        
+        @include breakpoint-up(large){
+            margin: auto 25rem ;
+            font-size: $font-lar;
+        }
+    }
+    &__icon{
+        img{
+            position: relative;
+            bottom: 0px;
+            width:100%;
+            max-width: 15.375rem;
+        }
+    }
+    &__item {
+        text-align: center;
+        @include breakpoint-up(large){
+            flex:1 ;
+        }
+    }
+    &__title{
+        color: $greyBlue;
+        font-weight: 700;
+        font-size: $font-med;
+        letter-spacing: 0.2px;
+    }
+}

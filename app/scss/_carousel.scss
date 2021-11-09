@@ -1,0 +1,179 @@
+.carousel{
+  padding: 2.25rem 1.5rem;
+  @include breakpoint-up(large){ 
+      padding: 3rem 9rem ;
+  }
+
+  &__card{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+    border: 0.125px solid $footer;
+    border-radius: 25px;
+
+  }
+
+  &__body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem;
+    @include breakpoint-up(large){ 
+      margin: 1rem 2.5rem;
+  }
+    .namarumah{
+      font-size: 1rem;
+      font-weight: 700;
+      color: $heavyBlue;
+      @include breakpoint-up(large){ 
+        font-size: $font-med;
+    }
+    }
+
+    .price {
+      text-align: center;
+      margin: 1rem 0;
+      border-radius: 8px;
+      background-color: $greyBlue;
+      width: 14rem ;
+      @include breakpoint-up(large){ 
+        width: 20rem ;
+    }
+      >p{
+        color: $white;
+        margin: 1rem;
+        font-size: $font-med;
+
+        @include breakpoint-up(large){ 
+          font-size: $font-lar;
+      }
+      }
+    }
+    .alamat{
+      a{
+        font-size: 1rem;
+        font-weight: 600;
+        color: grey;
+      }
+      img{
+        vertical-align: middle;
+        height: 25px;
+      }
+    }
+    .fasilitas{
+      padding: 1rem 0;
+      span{
+        margin: 0 0.001rem;
+          @include breakpoint-up(large){ 
+            margin: 0 0.1rem;
+        }
+      }
+      img{
+        vertical-align: middle;
+
+      }
+      a {
+        color: grey;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+    }
+    .sertifikat{
+      border-radius: 8px;
+      border:1px solid $greyBlue;
+      width: 14rem ;
+      text-align: center;
+
+      >p{
+        color: $greyBlue;
+        margin: 0.25rem 0.5rem;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 2rem;
+
+      }
+    }
+  }
+
+  
+  &__slide {
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 364px;
+
+    @include breakpoint-down(supersmall){
+      width: 325px;
+    }
+    
+    @include breakpoint-down(medium){
+      width: 718px;
+    }
+
+  }
+
+    &__images {
+      display: flex;
+      transform: translateX(0);
+      transition: transform 0.25s;
+      img {
+        height: 300px;
+        width: 364px;
+
+        
+        border-top-right-radius: 25px;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+          
+        @include breakpoint-down(supersmall){
+          height: 300px;
+          width: 325px;
+        }
+
+        @include breakpoint-up(medium){
+          height: 718px;
+          width: 718px;
+        }
+
+        @include breakpoint-up(large){
+          height: 300px;
+          width: 364px;
+          border-top-right-radius: 0px;
+          border-top-left-radius: 25px;
+          border-bottom-left-radius: 25px;
+          border-bottom-right-radius: 0px;
+        }
+      }
+    }
+    
+    &__button {
+      background: $white;
+      border: 0.5px solid grey;
+      border-radius: 50%;
+      color: black;
+      cursor: pointer;
+      font-size: 1.5rem;
+      font-weight: bold;
+      height: 3rem;
+      opacity: 100;
+      position: absolute;
+      transition: opacity 0.25s;
+      width: 3rem;
+      z-index: 1;
+      
+      &.previous {
+        left: 10px;
+      }
+      
+      &.next {
+        right: 10px;
+      }
+      
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  
+}

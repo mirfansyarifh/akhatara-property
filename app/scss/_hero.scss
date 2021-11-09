@@ -1,0 +1,29 @@
+.hero {
+    margin-bottom: 0px;
+    &__image{
+        // border: 1px solid magenta;
+        position: relative;
+        background-image: url('/assets/rectangle.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        border-radius: 10px;
+
+        @include breakpoint-up(large){
+            min-height: 37.5rem;
+        }
+        @include breakpoint-down(medium){
+            min-height: 24rem;
+        }
+        @include breakpoint-down(small){
+            min-height: 10rem;
+
+        }
+ 
+    }
+    &__text{
+        text-align: center;
+        color: $greyBlue;
+        line-height: 1;
+    }
+}

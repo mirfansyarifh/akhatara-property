@@ -1,0 +1,50 @@
+.footer{
+    background-color: $heavyBlue;
+    padding: 2.25rem;
+
+    @include breakpoint-up(large){
+        padding: 4rem 0;
+    }
+
+    &__grid{
+        @include breakpoint-up(medium){
+            padding: 2rem 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__item{
+        @include breakpoint-down(medium){
+            padding: 1rem 0;
+            flex: 1 0 50%;
+        }
+        @include breakpoint-up(large){
+            padding: 0 5rem;
+            flex:1;
+        }
+    }
+    &__social{
+        > span {
+            > img{
+                vertical-align: middle;
+            }
+            > a{
+                margin-left: 10px;
+                color: $footer;
+                font-size: $font-xsm;
+                vertical-align: middle;
+            }
+        }
+    }
+    &__text{
+        color: $footer;
+        font-size: $font-xsm;
+        width: 200px;
+    }
+    h3{
+        color: $littledarkWhite;
+        font-weight: 300;
+    }
+    
+}

@@ -1,0 +1,90 @@
+.article{
+    padding: 3rem 1.5rem;
+    @include breakpoint-up(large){ 
+        padding: 7.5rem 0;
+    }
+    @include breakpoint-up(medium){ 
+        padding: 3rem 3rem;
+    }
+
+    &__grid {
+        @include breakpoint-up(medium){
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__item {
+        text-align: center;
+        padding: 1.5rem 0;
+        @include breakpoint-up(large){
+            padding: 2rem 0;
+            flex: 1;
+        }
+    }
+
+    h1{
+        font-size: $font-med;
+        color: $greyBlue;
+        font-weight: 300;
+        text-align: center;
+        margin: 0 1rem;
+        
+        @include breakpoint-up(large){
+            font-size: $font-xlar;
+            margin: 0 7rem;
+        }
+        @include breakpoint-up(xlarge){
+            text-align: left;
+            font-size: $font-xlar;
+            margin-left: 7rem;
+            margin-right: 40rem;
+        }
+    }
+      
+    p{
+        margin: 0;
+        font-size: 1rem;
+        line-height: 2;
+    }
+
+      &__block {
+          @include breakpoint-up(large){
+            height: 15rem;
+            text-align: center;
+          }
+      }
+      
+      &__block::before {
+        @include breakpoint-up(large){
+            content: '';
+            display: inline-block;
+            height: 100%; 
+            vertical-align: middle;
+        }
+      }
+
+      &__centered {
+        @include breakpoint-up(large){
+        display: inline-block;
+        vertical-align: middle;
+        width: 35rem;
+
+        }
+      }
+
+        &__name{
+            margin-top: 2rem;
+            font-size: $font-sm;
+            color: $greyBlue;
+            line-height: 2rem;
+            font-weight: 800;
+            height: 2em;
+
+        }
+        &__title{
+            font-size: 1rem;
+            line-height: 1.75rem;
+        }
+
+}

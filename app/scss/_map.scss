@@ -1,0 +1,40 @@
+.map{
+    text-align: center;
+    @include breakpoint-up(large){
+        padding: 3rem 7.5rem;
+    }
+    @include breakpoint-down(medium){
+        padding: 2rem 5.75rem;
+        }
+    @include breakpoint-down(small){
+        padding: 1.5rem;
+        }
+
+    &__responsive{
+            overflow:hidden;
+            padding-bottom:56.25%;
+            position:relative;
+            height:0;
+        
+        > iframe{
+            left:0;
+            top:0;
+            height:100%;
+            width:100%;
+            position:absolute;
+        
+        }
+    }
+
+    h1{
+        font-size: 1rem;
+        color: $greyBlue;
+        padding-bottom: 0.625rem;
+        @include breakpoint-up(large){
+            font-size: $font-lar;
+            padding-bottom: 1rem;
+
+        }
+    }
+
+}
